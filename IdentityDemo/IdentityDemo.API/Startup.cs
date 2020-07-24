@@ -60,6 +60,8 @@ namespace IdentityDemo.API
                 };
             });
 
+
+
             services.AddControllers();
         }
 
