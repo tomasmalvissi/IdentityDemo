@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IdentityDemo.API.Models;
+using IdentityDemo.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -60,7 +61,7 @@ namespace IdentityDemo.API
                 };
             });
 
-
+            services.AddScoped<IUserService, UserService>();
 
             services.AddControllers();
         }
